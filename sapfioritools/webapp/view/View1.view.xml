@@ -1,6 +1,23 @@
 <mvc:View controllerName="customer.ravisoni.sapfioritools.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+
+    	<f:GridList
+			id="gridList"
+			headerText="GridList header"
+			items="{/items}">
+			<f:GridListItem>
+				<VBox class="sapUiSmallMargin">
+					<layoutData>
+						<FlexItemData growFactor="1" shrinkFactor="0" /> <!-- Don't shrink below minimum size. Fill space if available. -->
+					</layoutData>
+
+					<Title text="{title}" wrapping="true" />
+					<Label text="{subtitle}" wrapping="true" />
+				</VBox>
+			</f:GridListItem>
+		</f:GridList>
     </Page>
 </mvc:View>
