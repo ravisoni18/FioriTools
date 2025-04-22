@@ -7,7 +7,7 @@ sap.ui.define([
     return Controller.extend("customer.ravisoni.sapfioritools.controller.View1", {
         onInit() {
 
-            var data = {
+            var data = { 
                 "items": [
                     {
                         "title": "Grid item title 1",
