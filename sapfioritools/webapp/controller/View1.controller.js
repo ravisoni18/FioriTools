@@ -121,6 +121,101 @@ sap.ui.define([
             };
             var oModel = new JSONModel(data);
 			this.getView().setModel(oModel);
+
+
+
+         var payload =    {
+                "selectedKey": "page2",
+                "navigation": [
+                    {
+                        "title": "Root Item",
+                        "icon": "sap-icon://employee",
+                        "expanded": true,
+                        "key": "root1",
+                        "items": [
+                            {
+                                "title": "Child Item 1",
+                                "key": "page1"
+                            },
+                            {
+                                "title": "Child Item 2",
+                                "key": "page2"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Root Item",
+                        "icon": "sap-icon://building",
+                        "key": "root2"
+                    },
+                    {
+                        "title": "Root Item",
+                        "icon": "sap-icon://card",
+                        "expanded": false,
+                        "items": [
+                            {
+                                "title": "Child Item"
+                            },
+                            {
+                                "title": "Child Item"
+                            },
+                            {
+                                "title": "Child Item"
+                            },
+                            {
+                                "title": "Child Item"
+                            },
+                            {
+                                "title": "Child Item"
+                            },
+                            {
+                                "title": "Child Item"
+                            },
+                            {
+                                "title": "Child Item"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Root Item",
+                        "icon": "sap-icon://action",
+                        "expanded": false,
+                        "items": [
+                            {
+                                "title": "Child Item 1"
+                            },
+                            {
+                                "title": "Child Item 2"
+                            },
+                            {
+                                "title": "Child Item 3"
+                            }
+                        ]
+                    }
+                ],
+                "fixedNavigation": [
+                    {
+                        "title": "Fixed Item 1",
+                        "icon": "sap-icon://employee"
+                    },
+                    {
+                        "title": "Fixed Item 2",
+                        "icon": "sap-icon://building"
+                    },
+                    {
+                        "title": "Fixed Item 3",
+                        "icon": "sap-icon://card"
+                    }
+                ]
+            };
+
+
+            // this.oModel = new JSONModel(payload);
+			// this.oModel.loadData(sap.ui.require.toUrl("sap/f/sample/ShellBarWithSplitApp/model/model.json"));
+			// this.getView().setModel(this.oModel);
+
+
+            this.getView().setModel(new sap.ui.model.json.JSONModel(payload ), "toolPage");
         }
     });
 });
